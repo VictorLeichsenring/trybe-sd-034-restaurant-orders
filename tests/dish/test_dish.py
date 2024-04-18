@@ -28,6 +28,7 @@ def test_dish():
     pasta_dish.add_ingredient_dependency(ingredient_bacon, 200)
     assert pasta_dish.recipe.get(ingredient_bacon) == 200
 
-    assert pasta_dish.get_restrictions() == {Restriction.ANIMAL_DERIVED, Restriction.ANIMAL_MEAT}
+    assert pasta_dish.get_restrictions() == {
+        Restriction.ANIMAL_DERIVED, Restriction.ANIMAL_MEAT}
 
     assert Ingredient("bacon") in pasta_dish.get_ingredients()
