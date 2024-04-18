@@ -33,8 +33,7 @@ class MenuBuilder:
                     ingredient in self.inventory.inventory
                     for ingredient in dish.get_ingredients()
                 ):
-                    menu.append(
-                    {
+                    menu.append({
                         "dish_name": dish.name,
                         "price": dish.price,
                         "ingredients": dish.get_ingredients(),
